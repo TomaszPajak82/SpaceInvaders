@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b111913cc6cf6a943bd31d73e5dd886f, type: 3}
+  m_Name: GameSettingsInstallerScriptableObjectInstaller
+  m_EditorClassIdentifier: Assembly-CSharp::GameSettingsInstallerScriptableObjectInstaller
+  gameSettings:
+    targetFramerate: 100
+    playerSpeed: 6
+    livesCount: 3
+    firingCooldown: 0.5
+    enemiesColumnsCount: 10
+    enemiesRowsCount: 3
+    enemiesHorizontalSpacing: 2.5
+    enemiesVerticalSpacing: 2.5
+    incomingWaveTripDistance: 10
+    incomingWaveTripDistancePerRow: 10
+    incomingWaveTripDuration: 2
+    enemySpeed: 2
+    enemyColumnFiringPerSecondPropability: 0.1
+    projectileSpeed: 4
+  highScoreSettings:
+    displayFormat: '{0}. -  {1}'
+    displayFullFormat: '{0}. {1}  -  {2}'
+    displayCount: 10
+    storedCount: 20

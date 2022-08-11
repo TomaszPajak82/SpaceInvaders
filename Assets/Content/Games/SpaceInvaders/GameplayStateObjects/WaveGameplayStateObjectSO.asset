@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc44239b075ce5f45a12fc336f27181f, type: 3}
+  m_Name: WaveGameplayStateObjectSO
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 3335678821104621784, guid: 00bb8c162e021b748b387d2bb147ad9a, type: 3}
+  - {fileID: 3335678821104621784, guid: 6e55b732520909f47b15faa0c906f1d4, type: 3}
+  - {fileID: 3335678821104621784, guid: f18f61513feb1b94cace62d3009c4def, type: 3}
+  columnsCount: 10
+  rowsCount: 3
+  horizontalSpacing: 2.5
+  verticalSpacing: 2.5
+  movementSpeed: 2
+  columnFiringPerSecondPropability: 0.1
