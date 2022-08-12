@@ -1,5 +1,6 @@
 ﻿using SoftwareCore.Pool;
 using SoftwareCore.States;
+using SpaceInvaders.EntityRoot.Components;
 using SpaceInvaders.Health.Components;
 using SpaceInvaders.Settings;
 using SpaceInvaders.States.GameplaySubStates.GameplayStateObjects;
@@ -20,9 +21,14 @@ namespace SpaceInvaders.States.GameplaySubStates
 
         IGameplayStateObjectManager GameplayStateObjectManager { get; set; }
 
-        public InitializationGameplaySubState(IGameSettings settings, IInstantiator instantiator, IGameplayStateObjectManager gameplayStateObjectManager) {
+
+        EntityRootComponent.Factory EntityRootFactory { get; set; }
+
+        public InitializationGameplaySubState(IGameSettings settings,EntityRootComponent.Factory entityRootFactory, IInstantiator instantiator, IGameplayStateObjectManager gameplayStateObjectManager) {
             Settings = settings;
             Instantiator = instantiator;
+
+            EntityRootFactory = entityRootFactory;
 
             this.GameplayStateObjectManager = gameplayStateObjectManager;
         }
@@ -36,9 +42,14 @@ namespace SpaceInvaders.States.GameplaySubStates
 
             var positionAndOrientation = Data.PlayerArea.GetInitialPositionAndOrientation();
 
+
+            EntityRootComponent entityRoot = EntityRootFactory.Create((Data.PlayerPrefab, positionAndOrientation.position, positionAndOrientation.orientation, null));
+            Data.PlayerGO = entityRoot.gameObject;
+            /*
             Data.PlayerGO = PoolUtils.RetriveOrCreateObject(Data.PlayerPrefab, positionAndOrientation.position, positionAndOrientation.orientation, null,
                     x => Instantiator.InstantiatePrefab(x.prefab, x.position, x.rotation, x.parent)
                     );
+            */
 
             HealthComponent health = Data.PlayerGO.GetComponent<HealthComponent>();
             if(health != null) {

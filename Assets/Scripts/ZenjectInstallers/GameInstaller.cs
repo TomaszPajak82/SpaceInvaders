@@ -14,6 +14,9 @@ using Zenject;
 using SpaceInvaders.States.GameplaySubStates;
 using SpaceInvaders.States.GameplaySubStates.GameplayStateObjects;
 using SoftwareCore.Audio;
+using SpaceInvaders.EntityRoot.Components;
+
+using SoftwareCore.Factories;
 
 namespace SpaceInvaders.ZenjectInstallers
 {
@@ -57,6 +60,9 @@ namespace SpaceInvaders.ZenjectInstallers
 
             Container.BindInterfacesTo<CollisionSignalBus>().AsSingle();
             Container.DeclareSignal<ICollisionSignal>();
+
+            Container.BindFactory<(GameObject prefab, Vector3 position, Quaternion orientation, Transform parent),
+               EntityRootComponent, EntityRootComponent.Factory>().FromFactory<GameObjectFactoryWithPooling<EntityRootComponent>>();
 
 
         }
