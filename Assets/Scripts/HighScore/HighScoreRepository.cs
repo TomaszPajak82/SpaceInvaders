@@ -1,9 +1,11 @@
 ﻿using SoftwareCore.Enumerators;
+using SoftwareCore.Specification;
 using SoftwareCore.Storage;
 using SpaceInvaders.Settings;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
@@ -76,6 +78,19 @@ namespace SpaceInvaders.HighScore
             }
 
             return (success, deserializedData);
+        }
+
+        public IEnumerable<HighScoreInfo> Get(ISpecification<HighScoreInfo> specification) {
+
+            if (specification != null) {
+                return ApplySpecification(specification);
+            } else {
+                return this;
+            }
+        }
+
+        IEnumerable<HighScoreInfo> ApplySpecification(ISpecification<HighScoreInfo> specification) {
+            return SpecificationEvaluator.Evaluate(HighScores.AsQueryable(), specification);
         }
 
         public void Add(HighScoreInfo highScore) {

@@ -4,6 +4,8 @@ using System.Text;
 using UnityEngine;
 using Zenject;
 using SoftwareCore.UI.Binders.Components;
+using System.Collections.Generic;
+using SoftwareCore.Specification;
 
 namespace SpaceInvaders.UI.Presenters.Components
 {
@@ -19,6 +21,7 @@ namespace SpaceInvaders.UI.Presenters.Components
 
         public MethodTriggeredButtonUIBinderComponent addButtonBinder;
 
+        public MaxResultsSpecification<HighScoreInfo> MaxResultsSpecification { get; set; } = new MaxResultsSpecification<HighScoreInfo>(0);
 
         IHighScoreRepository HighScoreRepository { get; set; }
 
@@ -70,15 +73,16 @@ namespace SpaceInvaders.UI.Presenters.Components
             StringBuilder strBuilder = new StringBuilder();
             int index = 0;
 
-            foreach(var highScore in HighScoreRepository) {
+            IEnumerable<HighScoreInfo> highScoreItems;
+            if (this.displayAll) {
+                highScoreItems = HighScoreRepository;
+            } else {
+                this.MaxResultsSpecification.MaxResults = this.Settings.DisplayCount;
+                highScoreItems = HighScoreRepository.Get(this.MaxResultsSpecification);
+            }
+            
 
-                if (!this.displayAll) {
-
-                    if (index >= this.Settings.DisplayCount) {
-                        break;
-                    }
-
-                }
+            foreach (var highScore in highScoreItems) {
 
                 string format = displayFormatFull ? Settings.DisplayFullFormat : Settings.DisplayFormat;
 
