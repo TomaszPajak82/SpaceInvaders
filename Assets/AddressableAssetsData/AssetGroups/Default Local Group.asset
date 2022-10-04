@@ -21,42 +21,6 @@ MonoBehaviour:
     m_Address: Assets/Content/Games/GameContent.prefab
     m_ReadOnly: 0
     m_SerializedLabels: []
-  - m_GUID: 675afcf4a156abb44ad9b655b9e2d64e
-    m_Address: Assets/Content/Materials/StageMaterial.mat
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 0625a527a3ba19847886421a0fbb626e
-    m_Address: Assets/Content/Meshes/Projectile.fbx
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 29d0572e61d9cb7468b554bf4b25f0cc
-    m_Address: Assets/Content/Prefabs/MainCharacter.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 6e55b732520909f47b15faa0c906f1d4
-    m_Address: Assets/Content/Prefabs/NPC2_Spaceship.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: f18f61513feb1b94cace62d3009c4def
-    m_Address: Assets/Content/Prefabs/NPC3_Spaceship.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: ca63d538e1829cf4cb3842e85d592f71
-    m_Address: Assets/Content/Prefabs/NPCBoss1_Spaceship.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: be2cfb9a27fd4f5418494f3b197c7e84
-    m_Address: Assets/Content/Prefabs/Projectile.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 9910cc1f73a68e14996ff15173bbd40d
-    m_Address: Assets/Content/Prefabs/PlayerSpaceship.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
-  - m_GUID: 00bb8c162e021b748b387d2bb147ad9a
-    m_Address: Assets/Content/Prefabs/NPC1_Spaceship.prefab
-    m_ReadOnly: 0
-    m_SerializedLabels: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: d012855b0dffa5444b643e18d4691de4, type: 2}
   m_SchemaSet:
