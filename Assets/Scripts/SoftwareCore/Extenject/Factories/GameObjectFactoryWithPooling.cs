@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine;
 using Zenject;
 
-namespace SoftwareCore.Factories
+namespace SoftwareCore.Extenject.Factories
 {
     public class GameObjectFactoryWithPooling<T> : IFactory<(GameObject prefab, Vector3 position, Quaternion orientation, Transform parent), T>
     {

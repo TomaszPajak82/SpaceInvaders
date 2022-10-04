@@ -16,7 +16,7 @@ using SpaceInvaders.States.GameplaySubStates.GameplayStateObjects;
 using SoftwareCore.Audio;
 using SpaceInvaders.EntityRoot.Components;
 
-using SoftwareCore.Factories;
+using SoftwareCore.Extenject.Factories;
 
 namespace SpaceInvaders.ZenjectInstallers
 {
