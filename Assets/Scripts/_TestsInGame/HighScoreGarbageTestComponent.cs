@@ -19,19 +19,20 @@ namespace SpaceInvaders.Tests
         }
 
         private void Update() {
-
+            /*
             Profiler.enabled = true;
             UnityEngine.Profiling.Profiler.BeginSample("HighScoreRepositoryGarbageTest");
 
             foreach (var item in HighScoreRepository) {
                 if (item.value < -1) {
-                    this.GetComponent<MeshRenderer>();
+              //      this.GetComponent<MeshRenderer>();
                     break;
                 }
             }
 
             UnityEngine.Profiling.Profiler.EndSample();
             Profiler.enabled = false;
+            */
         }
 
 

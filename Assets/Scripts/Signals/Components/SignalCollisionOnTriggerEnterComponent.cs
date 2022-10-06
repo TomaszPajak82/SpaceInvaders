@@ -16,6 +16,7 @@ namespace SpaceInvaders.Signals.Components
 
         [Inject]
         void Construct(ICollisionSignalSender collisionSignalSender) {
+
             ReusableCollisionSignal = new CollisionSignal(null, null);
             CollisionSignalSender = collisionSignalSender;
         }
